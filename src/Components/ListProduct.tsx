@@ -11,7 +11,7 @@ export const ListProduct = () => {
 
     useEffect(() => {
         productActions.getAll('1');
-    } , []);
+    } , [productActions]);
 
 
     return <>

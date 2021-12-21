@@ -67,6 +67,7 @@ const Product = ({name, price_sale, price_to_show, description, commerce,discoun
                         <div className="desktop-carousel">
                             <div className="overlay" onClick={() => setCarousel(true)}/>
                             <img
+                                alt={'current_image'}
                                 src={photo[0].url}
                                 className="current-image"
                             />

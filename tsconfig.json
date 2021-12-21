@@ -22,8 +22,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "defaultSeverity": "error",
-    "ignoreBuildErrors": true
   },
   "include": [
     "src",

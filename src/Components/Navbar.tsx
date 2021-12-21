@@ -21,10 +21,9 @@ const Navbar = () => {
   const categoryActions = useCategoryActions();
   const productActions = useProductActions();
 
-  console.log(productCategory);
   useEffect(() => {
     categoryActions.getAll('1');
-  }, []);
+  }, [categoryActions]);
 
   const getProductsByCategory  = (id : string) => {
     productActions.getAll(id);
@@ -49,7 +48,7 @@ const Navbar = () => {
             />
           </li>
           {categories?.map((category : any,index) => <li
-              style={productCategory == category.id ? {color : 'hsl(26,100%,55%)'} : {}}
+              style={productCategory === category.id.toString() ? {color : 'hsl(26,100%,55%)'} : {}}
               onClick={() => getProductsByCategory(category?.id)}
               key={index}>{category?.category}</li>)}
         </ul>
