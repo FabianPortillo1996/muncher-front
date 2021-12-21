@@ -1,10 +1,6 @@
 import apiRequest from './apiService';
 
 export {useFetchWrapper};
-const headers = {
-    applicationJson: 'application/json',
-    multipartFormData: 'multipart/form-data',
-};
 
 function useFetchWrapper() {
     return {
