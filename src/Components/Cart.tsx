@@ -5,7 +5,7 @@ const Cart = () => {
   return (
     <Body>
       <Header>
-        <h3>Cart</h3>
+        <h3>Carrito</h3>
       </Header>
       <Content>
         <div className="thumbnail">
@@ -13,7 +13,7 @@ const Cart = () => {
         </div>
         <div className="details">
           <p>
-            Autumn Limited Edition...
+           Carrito de prueba
             <br />
             $125.00 x 3 <strong>$375.00</strong>
           </p>

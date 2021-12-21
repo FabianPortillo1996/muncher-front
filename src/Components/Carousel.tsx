@@ -1,33 +1,28 @@
-//Images
 import prev from "../Images/icon-previous.svg";
 import next from "../Images/icon-next.svg";
 import close from "../Images/icon-close-orange.svg";
-//Library
 import styled from "styled-components";
 import { useState } from "react";
 import Thumbnails from "./Thumbnails";
 
-function Carousel({ images, page, setCarousel }) {
-  //States
+function Carousel({ images, page, setCarousel } : any) {
   const [active, setActive] = useState(page);
-
-  //Handlers
   const nextHandler = () => {
-    setActive((prev ) => (prev === images.length - 1 ? 0 : prev + 1));
+    setActive((prev : number) => (prev === images.length - 1 ? 0 : prev + 1));
   };
   const prevHandler = () => {
-    setActive((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setActive((prev : number) => (prev === 0 ? images.length - 1 : prev - 1));
   };
   const closeHandler = () => {
     setCarousel(false);
   };
-  const activeImageHandler = (key) => {
+  const activeImageHandler = (key : number) => {
     setActive(key);
   };
 
   return (
     <Body>
-      <div className="overlay" onClick={closeHandler}></div>
+      <div className="overlay" onClick={closeHandler}/>
       <Slide>
         <div className="exit">
           <img src={close} alt="Close" onClick={closeHandler} />

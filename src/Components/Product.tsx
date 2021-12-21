@@ -24,7 +24,7 @@ const Product = ({name, price_sale, price_to_show, description, commerce,discoun
     const [preview, setPreview] = useState(0);
     const [carousel, setCarousel] = useState(false);
     const [carouselPosition, setCarouselPosition] = useState(0);
-    const ref = useRef(null);
+    const ref = useRef<any>(null );
 
     useEffect(() => {
         const imageWidth = ref?.current?.offsetWidth;
@@ -39,7 +39,7 @@ const Product = ({name, price_sale, price_to_show, description, commerce,discoun
         setPreview((prev) => (prev === 0 ? data[0].images.length - 1 : prev - 1));
     };
 
-    const quantityHandler = (increment : number) => {
+    const quantityHandler = (increment : boolean) => {
         if (increment) {
             setQuantity((prev) => (prev === 10 ? prev : prev + 1));
         } else {

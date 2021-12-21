@@ -6,7 +6,7 @@ import styled from "styled-components";
 import {useEffect, useState} from "react";
 import CartComp from "./Cart";
 import {useRecoilValue} from "recoil";
-import {productCategoryAtom, productsAtom} from "../recoil/state/products";
+import {productCategoryAtom} from "../recoil/state/products";
 import {useCategoryActions} from "../recoil/actions/categories.actions";
 import {categoriesAtom} from "../recoil/state/category";
 import {useProductActions} from "../recoil/actions/product.actions";

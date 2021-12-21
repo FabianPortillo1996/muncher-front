@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-function Thumbnails({ data, activeImageHandler, preview }) {
+function Thumbnails({ data, activeImageHandler, preview } : any) {
   return (
     <Body>
       {data.map((image : any, key : number) => (
