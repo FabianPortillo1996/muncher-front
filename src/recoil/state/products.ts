@@ -6,7 +6,7 @@ const productsAtom = atom({
 });
 const productCategoryAtom = atom({
     key: 'productCategory',
-    default: 1
+    default: '1'
 });
 const productAtom = atom({
     key: 'product',
